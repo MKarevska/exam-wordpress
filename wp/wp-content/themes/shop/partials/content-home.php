@@ -13,7 +13,11 @@
 				</div>
 				<div class="product-logo">
 					<div class="product-logo-box">
-						<img src="images/washing-machine.jpg" alt="">
+                    <?php if ( has_post_thumbnail() ) :  ?>
+                        <?php the_post_thumbnail( 'job-thumbnail' ); ?>
+                        <?php else : ?>
+                        <img src="wp-content\themes\shop\images\washing-machine.jpg" alt="default image">
+                    <?php endif; ?>
 					</div>
 				</div>
 			</li>
